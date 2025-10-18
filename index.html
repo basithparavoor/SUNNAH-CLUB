@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the SUNNAH CLUB</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #25D366; /* WhatsApp Green */
+            --secondary-color: #34B7F1; /* Blue for Debate Group */
+            --background-color: #f4f6f9;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --subtle-text: #666;
+            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--background-color);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+        
+        /* --- STYLE FOR THE NEW MAIN LOGO --- */
+        .main-logo {
+            max-width: 250px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: var(--text-color);
+            font-size: 2.2rem; /* Slightly smaller to accommodate logo */
+            font-weight: 700;
+        }
+
+        header p {
+            color: var(--subtle-text);
+            font-size: 1.1rem;
+        }
+
+        .group-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Allows stacking on smaller screens */
+        }
+
+        .group-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 30px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .group-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .group-logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .group-card h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--text-color);
+        }
+
+        .join-button {
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .join-button.public {
+             background-color: var(--primary-color);
+        }
+        
+        .join-button.debate {
+             background-color: var(--secondary-color);
+        }
+
+        .join-button:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: var(--subtle-text);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="sunnah_club_main_logo.png" alt="SUNNAH CLUB Logo" class="main-logo">
+            
+            <h1>Welcome to SUNNAH CLUB</h1>
+            <p>Choose the community you'd like to be a part of.</p>
+        </header>
+
+        <main>
+            <div class="group-options">
+                <div class="group-card">
+                    <img src="sunnah_club_public_logo.jpeg" alt="SUNNAH CLUB PUBLIC Logo" class="group-logo">
+                    <h2>SUNNAH CLUB PUBLIC</h2>
+                    <button onclick="redirectToPublicGroup()" class="join-button public">Join Group</button>
+                </div>
+
+                <div class="group-card">
+                    <img src="sunnah_club_debate_logo.jpeg" alt="SUNNAH CLUB PUBLIC DEBATE Logo" class="group-logo">
+                    <h2>SUNNAH CLUB PUBLIC DEBATE</h2>
+                    <button onclick="redirectToDebateGroup()" class="join-button debate">Join Group</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p><b>Note:</b> If a group is full, please return to this page and try again.</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- PASTE YOUR 'PUBLIC' GROUP LINKS HERE ---
+        const publicGroupLinks = [
+            'https://chat.whatsapp.com/PUBLIC_LINK_1',
+            'https://chat.whatsapp.com/PUBLIC_LINK_2',
+            // Add all your regular public group links here
+        ];
+
+        // --- PASTE YOUR 'PUBLIC DEBATE' GROUP LINKS HERE ---
+        const debateGroupLinks = [
+            'https://chat.whatsapp.com/DEBATE_LINK_1',
+            'https://chat.whatsapp.com/DEBATE_LINK_2',
+            // Add all your debate group links here
+        ];
+        // ----------------------------------------------------
+
+        function redirectToPublicGroup() { /* ... */ }
+        function redirectToDebateGroup() { /* ... */ }
+
+        // (The JavaScript functions are unchanged)
+    </script>
+
+</body>
+</html>
