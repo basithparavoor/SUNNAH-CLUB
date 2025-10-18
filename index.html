@@ -43,16 +43,15 @@
             margin-bottom: 40px;
         }
         
-        /* --- STYLE FOR THE NEW MAIN LOGO --- */
         .main-logo {
-            max-width: 250px; /* Adjust size as needed */
+            max-width: 250px;
             height: auto;
             margin-bottom: 20px;
         }
 
         header h1 {
             color: var(--text-color);
-            font-size: 2.2rem; /* Slightly smaller to accommodate logo */
+            font-size: 2.2rem;
             font-weight: 700;
         }
 
@@ -65,7 +64,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap; /* Allows stacking on smaller screens */
+            flex-wrap: wrap;
         }
 
         .group-card {
@@ -165,7 +164,7 @@
     </div>
 
     <script>
-        // --- PASTE YOUR 'PUBLIC' GROUP LINKS HERE ---
+        // --- YOUR 'PUBLIC' GROUP LINKS ---
         const publicGroupLinks = [
             'https://chat.whatsapp.com/C2FwUZwbD4KFpTRTA0XvsN?mode=wwt',
             'https://chat.whatsapp.com/IJ5LeOpCJm5KvSjqw3MucL?mode=wwt',
@@ -180,23 +179,34 @@
             'https://chat.whatsapp.com/L7Zbo115VGX83Seisueitf?mode=wwt',
             'https://chat.whatsapp.com/BKNNwtco37GF9LB65KqyHw?mode=wwt',
             'https://chat.whatsapp.com/C6NUGWim78hJjEbp6RdPyR?mode=wwt',
-            // Add all your regular public group links here
         ];
 
-        // --- PASTE YOUR 'PUBLIC DEBATE' GROUP LINKS HERE ---
+        // --- YOUR 'PUBLIC DEBATE' GROUP LINKS ---
         const debateGroupLinks = [
             'https://chat.whatsapp.com/ICx6cPFWl6aEBDC8b6rAlJ?mode=wwt',
             'https://chat.whatsapp.com/INJiBZmda0h4frYTCYlWkC?mode=wwt',
             'https://chat.whatsapp.com/KPnwxmrQZ9tEakJaZpvGMe?mode=wwt',
             'https://chat.whatsapp.com/BCGlAmHmaO82lQiatYNG4w?mode=wwt',
-            // Add all your debate group links here
         ];
-        // ----------------------------------------------------
+        
+        // --- !! THIS IS THE FIXED CODE !! ---
+        function redirectToPublicGroup() {
+            if (publicGroupLinks.length === 0) {
+                alert("Sorry, no Public group links are available at the moment.");
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * publicGroupLinks.length);
+            window.location.href = publicGroupLinks[randomIndex];
+        }
 
-        function redirectToPublicGroup() { /* ... */ }
-        function redirectToDebateGroup() { /* ... */ }
-
-        // (The JavaScript functions are unchanged)
+        function redirectToDebateGroup() {
+            if (debateGroupLinks.length === 0) {
+                alert("Sorry, no Debate group links are available at the moment.");
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * debateGroupLinks.length);
+            window.location.href = debateGroupLinks[randomIndex];
+        }
     </script>
 
 </body>
