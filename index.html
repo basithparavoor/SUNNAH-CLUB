@@ -112,22 +112,45 @@
             width: 100%;
         }
         
-        .join-button.public {
-             background-color: var(--primary-color);
-        }
-        
-        .join-button.debate {
-             background-color: var(--secondary-color);
-        }
-
-        .join-button:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
+        .join-button.public { background-color: var(--primary-color); }
+        .join-button.debate { background-color: var(--secondary-color); }
+        .join-button:hover { transform: scale(1.05); opacity: 0.9; }
 
         footer {
             margin-top: 40px;
             color: var(--subtle-text);
+        }
+
+        /* --- !! NEW MOBILE OPTIMIZATIONS !! --- */
+        /* These styles apply only to screens 850px or narrower */
+        @media (max-width: 850px) {
+            body {
+                display: block; /* Allows natural scrolling if absolutely needed */
+                padding: 15px;
+            }
+            
+            header { margin-bottom: 25px; }
+
+            .main-logo { max-width: 180px; margin-bottom: 15px; }
+
+            header h1 { font-size: 1.8rem; }
+            
+            header p { font-size: 1rem; margin-bottom: 0; }
+            
+            .group-options { gap: 15px; }
+
+            .group-card {
+                width: 100%;
+                max-width: 320px;
+                padding: 20px;
+                margin: 0 auto;
+            }
+
+            .group-logo { max-width: 120px; margin-bottom: 15px; }
+
+            .group-card h2 { font-size: 1.1rem; margin-bottom: 20px; }
+
+            footer { margin-top: 25px; }
         }
 
     </style>
@@ -137,7 +160,6 @@
     <div class="container">
         <header>
             <img src="sunnah_club_main_logo.png" alt="SUNNAH CLUB Logo" class="main-logo">
-            
             <h1>Welcome to SUNNAH CLUB</h1>
             <p>Choose the community you'd like to be a part of.</p>
         </header>
@@ -164,49 +186,11 @@
     </div>
 
     <script>
-        // --- YOUR 'PUBLIC' GROUP LINKS ---
-        const publicGroupLinks = [
-            'https://chat.whatsapp.com/C2FwUZwbD4KFpTRTA0XvsN?mode=wwt',
-            'https://chat.whatsapp.com/IJ5LeOpCJm5KvSjqw3MucL?mode=wwt',
-            'https://chat.whatsapp.com/DdTmFxGae1r1MvAgWPBfcd?mode=wwt',
-            'https://chat.whatsapp.com/DdTmFxGae1r1MvAgWPBfcd?mode=wwt',
-            'https://chat.whatsapp.com/BEaYrbYfy5d3cGtzzAI10P?mode=wwt',
-            'https://chat.whatsapp.com/BuEQFn1kI4oFrvyYQEH7gR?mode=wwt',
-            'https://chat.whatsapp.com/F25c2j9p2ok9QOT8OqgprE?mode=wwt',
-            'https://chat.whatsapp.com/BMuNsRvqzAkDt2PZT00QIK?mode=wwt',
-            'https://chat.whatsapp.com/EkSh205hXI2Az3FkjtwlMB?mode=wwt',
-            'https://chat.whatsapp.com/KDO0oGSWWyFBizT71BHCvD?mode=wwt',
-            'https://chat.whatsapp.com/L7Zbo115VGX83Seisueitf?mode=wwt',
-            'https://chat.whatsapp.com/BKNNwtco37GF9LB65KqyHw?mode=wwt',
-            'https://chat.whatsapp.com/C6NUGWim78hJjEbp6RdPyR?mode=wwt',
-        ];
-
-        // --- YOUR 'PUBLIC DEBATE' GROUP LINKS ---
-        const debateGroupLinks = [
-            'https://chat.whatsapp.com/ICx6cPFWl6aEBDC8b6rAlJ?mode=wwt',
-            'https://chat.whatsapp.com/INJiBZmda0h4frYTCYlWkC?mode=wwt',
-            'https://chat.whatsapp.com/KPnwxmrQZ9tEakJaZpvGMe?mode=wwt',
-            'https://chat.whatsapp.com/BCGlAmHmaO82lQiatYNG4w?mode=wwt',
-        ];
+        const publicGroupLinks = [ 'https://chat.whatsapp.com/C2FwUZwbD4KFpTRTA0XvsN?mode=wwt', 'https://chat.whatsapp.com/IJ5LeOpCJm5KvSjqw3MucL?mode=wwt', 'https://chat.whatsapp.com/DdTmFxGae1r1MvAgWPBfcd?mode=wwt', 'https://chat.whatsapp.com/DdTmFxGae1r1MvAgWPBfcd?mode=wwt', 'https://chat.whatsapp.com/BEaYrbYfy5d3cGtzzAI10P?mode=wwt', 'https://chat.whatsapp.com/BuEQFn1kI4oFrvyYQEH7gR?mode=wwt', 'https://chat.whatsapp.com/F25c2j9p2ok9QOT8OqgprE?mode=wwt', 'https://chat.whatsapp.com/BMuNsRvqzAkDt2PZT00QIK?mode=wwt', 'https://chat.whatsapp.com/EkSh205hXI2Az3FkjtwlMB?mode=wwt', 'https://chat.whatsapp.com/KDO0oGSWWyFBizT71BHCvD?mode=wwt', 'https://chat.whatsapp.com/L7Zbo115VGX83Seisueitf?mode=wwt', 'https://chat.whatsapp.com/BKNNwtco37GF9LB65KqyHw?mode=wwt', 'https://chat.whatsapp.com/C6NUGWim78hJjEbp6RdPyR?mode=wwt', ];
+        const debateGroupLinks = [ 'https://chat.whatsapp.com/ICx6cPFWl6aEBDC8b6rAlJ?mode=wwt', 'https://chat.whatsapp.com/INJiBZmda0h4frYTCYlWkC?mode=wwt', 'https://chat.whatsapp.com/KPnwxmrQZ9tEakJaZpvGMe?mode=wwt', 'https://chat.whatsapp.com/BCGlAmHmaO82lQiatYNG4w?mode=wwt', ];
         
-        // --- !! THIS IS THE FIXED CODE !! ---
-        function redirectToPublicGroup() {
-            if (publicGroupLinks.length === 0) {
-                alert("Sorry, no Public group links are available at the moment.");
-                return;
-            }
-            const randomIndex = Math.floor(Math.random() * publicGroupLinks.length);
-            window.location.href = publicGroupLinks[randomIndex];
-        }
-
-        function redirectToDebateGroup() {
-            if (debateGroupLinks.length === 0) {
-                alert("Sorry, no Debate group links are available at the moment.");
-                return;
-            }
-            const randomIndex = Math.floor(Math.random() * debateGroupLinks.length);
-            window.location.href = debateGroupLinks[randomIndex];
-        }
+        function redirectToPublicGroup() { if (publicGroupLinks.length === 0) { alert("Sorry, no Public group links are available at the moment."); return; } const randomIndex = Math.floor(Math.random() * publicGroupLinks.length); window.location.href = publicGroupLinks[randomIndex]; }
+        function redirectToDebateGroup() { if (debateGroupLinks.length === 0) { alert("Sorry, no Debate group links are available at the moment."); return; } const randomIndex = Math.floor(Math.random() * debateGroupLinks.length); window.location.href = debateGroupLinks[randomIndex]; }
     </script>
 
 </body>
